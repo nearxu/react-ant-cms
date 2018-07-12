@@ -1,10 +1,16 @@
 import { combineReducers } from "redux";
-import auth from "./auth";
-import menu from "./menu";
+import { type } from "../actions/index";
 
-const rootReducer = combineReducers({
-  auth,
-  menu
-});
+const Data = (state, action) => {
+  switch (action.type) {
+    case type.SWITCH_MENU:
+      return {
+        ...state,
+        menuName: action.menuName
+      };
+    default:
+      return { ...state };
+  }
+};
 
-export default rootReducer;
+export default Data;

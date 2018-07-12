@@ -1,15 +1,15 @@
-import { createStore, applyMiddleware, combineReducers, compose } from "redux";
-import thunkMiddleware from "redux-thunk";
+import { createStore, applyMiddleware } from "redux";
 
-import reducer from "../reducer";
+import reducer from "../reducer/index";
+const initState = {
+  menuName: ""
+};
 
-const createStoreWithMiddleware = applyMiddleware(thunkMiddleware)(createStore);
-
-export default function configStore(initialState) {
-  let store = createStoreWithMiddleware(
+const store = () =>
+  createStore(
     reducer,
-    initialState,
+    initState,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   );
-  return store;
-}
+
+export default store;

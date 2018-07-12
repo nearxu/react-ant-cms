@@ -100,3 +100,19 @@ body {
 }
 
 /** 外边距 end **/
+.container {
+  .nav-left {
+    background-color: #001529;
+    color: #ffffff;
+    height: calc(100vh);
+  }
+  .main {
+    height: calc(100vh);
+    background-color: #fff;
+    overflow: auto;
+  }
+  .content {
+    position: relative;
+    padding: 20px;
+  }
+}
