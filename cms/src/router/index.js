@@ -24,7 +24,7 @@ import BasicTable from "../pages/table/index";
 // import OrderDetail from '../pages/order/detail'
 // import BikeMap from '../pages/map/bikeMap'
 // import User from '../pages/user/index'
-// import Bar from '../pages/echarts/bar/index'
+import Bar from "../pages/echarts/bar/index";
 // import Pie from '../pages/echarts/pie/index'
 // import Line from '../pages/echarts/line/index'
 // import Permission from '../pages/permission'
@@ -45,6 +45,7 @@ const RouterConfig = (
               <Route path="/ui/messages" component={Messages} />
               <Route path="/ui/tabs" component={Tabs} />
               <Route path="/table/basic" component={BasicTable} />
+              <Route path="/charts/bar" component={Bar} />
               {/* <Route path="/ui/gallery" component={Gallery} />
               <Route path="/ui/carousel" component={Carousel} />
               <Route path="/form/login" component={FormLogin} />
